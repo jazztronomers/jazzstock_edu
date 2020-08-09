@@ -1,0 +1,46 @@
+## PYTHON 설치
+
+https://www.python.org/ftp/python/3.6.8/python-3.6.8-webinstall.exe                # X86, 32비트
+https://www.python.org/ftp/python/3.6.8/python-3.6.8-amd64-webinstall.exe          # X86-64 64비트
+
+
+
+## PIP INSTALL jupyterlab
+
+1. C 드라이브에 requirements.txt를 작성
+2. 내용은 다음과 같이 작성
+
+jupyterlab==2.1.2
+pandas==1.0.5
+numpy==1.18.5
+sklearn==0.20.0
+h2o==3.28.0.4
+
+        
+3. POWERSHELL을 실행해서 다음 스크립트를 실행  
+
+    $PS C:\WINDOWS\system32> cd d:/
+    $PS D:\> pip3 install -r .\requirements.txt
+
+## JUPYTERLAB을 실행하는 POWERSHELL SCRIPT 작성
+
+1. 바탕화면 새로만들기, 텍스트파일
+2. run_jupyterlab.ps1
+3. 편집
+
+        |------------------------------------------------------------------------------------------------------------------
+        |requirement.txt
+        |------------------------------------------------------------------------------------------------------------------
+        |jupyter lab --ip 127.0.0.1 --no-browser --port 8888 --notebook-dir d:/ --NotebookApp.token='mypassword'
+        |------------------------------------------------------------------------------------------------------------------
+
+4. 우클릭, powershell로 실행
+
+
+## STARTUP
+
+    WIN+R / shell:startup
+
+## 스케줄러
+
+    WIN+R / taskschd.msc
